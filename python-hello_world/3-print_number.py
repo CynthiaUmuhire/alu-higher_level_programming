@@ -2,4 +2,5 @@
 number = 98
 x="Battery"
 y="street"
-print(number '%s %s' % (x,y))
+print(f {number} ' {x} {y}')
+
