@@ -7,4 +7,7 @@ def add(a, b):
     Returns:
         The return value. a + b
     """
+   a = 1
+   b = 2
+   
   return (a + b)
