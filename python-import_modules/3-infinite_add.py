@@ -9,4 +9,4 @@ else:
   for i in argv[1:]:
     sum = sum + int(i)
    
-print(sum)
+  print(sum)
