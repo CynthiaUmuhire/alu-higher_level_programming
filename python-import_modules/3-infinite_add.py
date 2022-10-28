@@ -6,7 +6,7 @@ sum = 0
 if num == 0:
     print(sum)
 else:
-  for i in argv[1:]:
-    sum = sum + int(i)
+    for i in argv[1:]:
+        sum = sum + int(i)
 
     print(sum)
