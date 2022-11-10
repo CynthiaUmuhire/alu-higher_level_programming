@@ -12,10 +12,12 @@ class Square:
         self.__size = size
         self.__position = position
 
+    @property
     def size(self):
         """returns size."""
         return self.__size
 
+    @size.setter
     def size(self, size):
         """size to a size."""
         if not isinstance(size, int):
@@ -29,10 +31,12 @@ class Square:
         self.size = size
         self.position = position
 
+    @property
     def size(self):
         """Retrieves the size."""
         return self.__size
 
+    @size.setter
     def size(self, value):
         """Sets the size to a value."""
         if not isinstance(value, int):
@@ -41,10 +45,12 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
     def position(self):
         """Retrieves the position."""
         return self.__position
 
+    @position.setter
     def position(self, value):
         """Sets position to a value."""
         if not isinstance(value, tuple) or len(value) != 2:
