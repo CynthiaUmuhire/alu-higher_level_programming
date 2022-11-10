@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Creates a square class"""
 
+
 class Square:
   '''
   creates a a square class
