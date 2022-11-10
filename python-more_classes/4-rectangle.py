@@ -92,4 +92,3 @@ class Rectangle:
                     string representation of the rectangle(#)
         """
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
-    
