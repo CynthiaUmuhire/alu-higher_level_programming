@@ -4,8 +4,8 @@
 
 class Square:
    '''
-   create a square 
-       has a private instance att:size
+   Create a square 
+       Has a private Instance att: size
    '''
   
   def __init__(self, size=0):
