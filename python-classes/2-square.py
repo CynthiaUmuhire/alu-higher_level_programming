@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Creates a square class"""
+"""Creates a square """
 
 
 class Square:
@@ -16,3 +16,4 @@ class Square:
       raise ValueError("size must be >= 0")
 
     self.__size = size
+   
