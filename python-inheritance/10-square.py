@@ -22,3 +22,4 @@ class Square(Rectangle):
     def __str__(self):
         """Returns [Square] <width>/<height>."""
         return super().__str__()
+        
