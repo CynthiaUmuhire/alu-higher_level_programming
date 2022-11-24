@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""I documented you"""
-
-import urllib.request
-import urllib.parse
+# python script that takes your GitHub credentials (username and password),
+# and uses the 'GitHub API' to display your 'id'
+"""
+    use 'GitHub API to display 'id'
+"""
 import sys
+import requests
+from requests.auth import HTTPBasicAuth
 
-if __name__ == '__main__':
-    """"Documented"""
-    url = sys.argv[1]
-    message = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(message)
-    data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
-        print("{}".format(content.decode("utf-8")))
+
+if __name__ == "__main__":
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get("https://api.github.com/user", auth=auth)
+    print(r.json().get("id"))
