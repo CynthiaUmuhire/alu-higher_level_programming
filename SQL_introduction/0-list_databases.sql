@@ -1,2 +1,2 @@
---- script that lists all databases created ---
+-- script that lists all databases created 
 SHOW DATABASES;
