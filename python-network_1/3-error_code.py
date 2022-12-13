@@ -1,17 +1,21 @@
 #!/usr/bin/python3
-"""I documented you"""
-
-import urllib.request
-import urllib.parse
+# python script that takes in a URL,
+# sends a request to the URL and displays the body of the response
+# (decoded in utf-8)
+"""
+    send a request to the URL & display body of the response
+"""
 import sys
+import urllib.error
+import urllib.request
 
-if __name__ == '__main__':
-    """"Documented"""
+
+if __name__ == "__main__":
     url = sys.argv[1]
-    message = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(message)
-    data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
-        print("{}".format(content.decode("utf-8")))
+
+    request = urllib.request.Request(url)
+    try:
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
