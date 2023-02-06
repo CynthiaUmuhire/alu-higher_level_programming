@@ -5,6 +5,6 @@ if (c === undefined || isNaN(c)){
     console.log('Missing size');
 } else {
     for(let i = 1;i <= c;i++){
-     console.log('x'.repeat(c));
+     console.log('X'.repeat(c));
     } 
 }
