@@ -4,4 +4,4 @@ class Rectangle {
         this.height = height;
         this.width = width;
     }    
-}
+};
