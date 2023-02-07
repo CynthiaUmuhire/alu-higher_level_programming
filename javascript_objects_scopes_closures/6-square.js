@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-import OriginalSquare from './5-square';
+const OriginalSquare = require('./5-square');
 
-export default class Square extends OriginalSquare {
+module.exports = class Square extends OriginalSquare {
   charPrint (c) {
     if (c === undefined) {
       for (let i = 0; i < this.height; i++) {
